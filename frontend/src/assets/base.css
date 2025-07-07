@@ -1,0 +1,55 @@
+/* color palette */
+:root {
+  --vt-c-white-mute: #F2F3F7;
+  --vt-c-white: #ffffff;
+  --vt-c-black: #181818;
+  --vt-c-red: #FF0032;
+  --vt-v-red-light: #ff6281;
+}
+
+/* color variables */
+:root {
+  --color-background-mute: var(--vt-c-white-mute);
+  --color-background-white: var(--vt-c-white);
+
+  --color-button: var(--vt-c-red);
+  --color-button-hover: var(--vt-v-red-light);
+  --color-border: var(--vt-c-red);
+
+  --color-text: var(--vt-c-black);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 800px;
+  color: var(--color-text);
+  background: var(--color-background-mute);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

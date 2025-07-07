@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: strapi
+    environment:
+      DATABASE_CLIENT: sqlite
+      DATABASE_FILENAME: .tmp/data.db
+      NODE_ENV: development
+    volumes:
+      - ./backend:/srv/app
+      - strapi-data:/srv/app/.tmp
+    ports:
+      - "1337:1337"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: vue-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    restart: unless-stopped
+    depends_on:
+      - backend
+
+volumes:
+  strapi-data:
