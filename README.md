@@ -25,7 +25,7 @@ sh run-server.sh
 sh run-webpage.sh
 ```
 
-Скрипт run-server.sh создает файл .env, устанавливает зависимости и запускает админку на [http://localhost:1337](http://localhost:1337). Скрипт run-webpage.sh устанавливает зависимости и запускает веб-страницу на [http://localhost:5174]([http://localhost:5174]).
+Скрипт run-server.sh создает файл .env, устанавливает зависимости и запускает админку на [http://localhost:1337](http://localhost:1337). Скрипт run-webpage.sh устанавливает зависимости и запускает веб-страницу на [http://localhost:5174](http://localhost:5174).
 
 3. Заходя на [http://localhost:1337](http://localhost:1337) впервые, необходимо авторизоваться:
     - Вы можете создать свой личный аккаунт
